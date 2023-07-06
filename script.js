@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#btn').addEventListener('click', function(){
     let text = document.querySelector('#texto').value;
-    plugin(text);
+    generatePDF();
   }) 
   
   function upper(text){
@@ -60,5 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#result").innerHTML = generatedText;
     // console.log(generatedText);
     return generatedText;
+  }
+
+  function generatePDF(){
+    var imgData = ""; // base-64
+    var doc = new jsPDF();
+    doc.setFontSize(40);
+    doc.text(35, 25, "Artigo para o iMasters");
+    doc.addImage(imgData, 'JPEG', 15, 40, 180, 180);
   }
 });
