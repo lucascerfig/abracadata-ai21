@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       body: JSON.stringify({
         "prompt": text,
         "numResults": 1,
-        "maxTokens": 100,
+        "maxTokens": 5000,
         "temperature": 0.8,
         "topKReturn": 0,
         "topP":1,
